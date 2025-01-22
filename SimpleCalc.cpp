@@ -33,7 +33,7 @@ std::vector<std::string> SimpleCalc::getOperation() {
             std::cout << "Enter your first integer: ";
             std::getline(std::cin, num1);
             try {
-                std::stod(num1); // converts the string to double
+                std::stoi(num1); // converts the string to double
             } catch (...) {
                 std::cout << "Invalid number! Please try again!" << std::endl; // if it's not a number, then it'll throw an error
                 continue;
@@ -43,7 +43,7 @@ std::vector<std::string> SimpleCalc::getOperation() {
             std::cout << "Enter your second integer: ";
             std::getline(std::cin, num2);
             try {
-                std::stod(num2);
+                std::stoi(num2);
 
                 // this checks for division by 0
                 if (operation == "/" && std::stod(num2) == 0) {
